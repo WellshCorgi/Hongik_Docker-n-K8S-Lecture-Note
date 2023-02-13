@@ -43,6 +43,18 @@ CMD ["apache2-foreground"]
  - **COPY** 를 통하여 도커 파일의 디렉토리에서 이미지에 저장될 파일 경로를 설정 해두었다
  - **EXPOSE**를 통해 호스트와 80번 포트를 연결시켜줬다
  - **CMD**에서는 Docker에게 Apache 웹 서버를 시작하고 컨테이너가 **stop** 될 때 까지 forground에서 실행하도록 명령하였다.
+---
+
+## 이미지 생성 및 Docker container
+
+```bash
+docker build -t homeworkimage .
+
+docker run -it --name php73 -p 8000:80 homeworkimage
+```
+---
+## 실행 결과
+![스크린샷 2023-02-08 오후 5 33 14](https://user-images.githubusercontent.com/112881296/218365721-bc061800-c9f9-43e5-9d64-2101818724f4.jpeg)
 
 
 
